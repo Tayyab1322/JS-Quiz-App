@@ -47,7 +47,7 @@ body{
     cursor: pointer;
     transition: all 0.3s;
 }
-.btn:hover{
+.btn:hover:not([disabled]){
     background: #222;
     color: #fff;
 }
@@ -65,10 +65,17 @@ body{
     display: none;
 
 }
+.btn:disabled{
+    cursor: no-drop;
+}
 
-.correct{
+.quiz .correct{
     background: #9aeabc;
 }
-.incorrect{
+/* .quiz .correct:hover{
+    background: #222;
+    color: #fff;
+} */
+.quiz .incorrect{
     background: #ff9393;
 }
